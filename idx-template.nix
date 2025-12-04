@@ -1,15 +1,32 @@
 { pkgs, ... }: {
   channel = "stable-24.05";
   packages = [ pkgs.nodejs ];
-  bootstrap = ''
-    npx nativescript create sample --template vue
-    mkdir "$out"/.idx
-    cp ${./dev.nix} "$out"/.idx/dev.nix && chmod +w "$out"/.idx/dev.nix
+    bootstrap = ''
+    mkdir -p "$WS_NAME"
+    npx nativescript create "$WS_NAME" --template vue
+     mkdir -p "$WS_NAME/.idx/"
+    cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
+    chmod -R +w "$WS_NAME"
+    mv "$WS_NAME" "$out"
+
+    mkdir -p "$out/.idx"
     chmod -R u+w "$out"
     cp -rf ${./.idx/airules.md} "$out/.idx/airules.md"
     cp -rf "$out/.idx/airules.md" "$out/GEMINI.md"
     chmod -R u+w "$out"
-    (cd "$out"; npm install --package-lock-only --ignore-scripts)
+
+    cd "$out"; npm install --package-lock-only --ignore-scripts
   '';
+#   bootstrap = ''
+    
+#     npx nativescript create sample --template vue --path "$out"
+#     mkdir "$out"/.idx
+#     cp ${./dev.nix} "$out"/.idx/dev.nix && chmod +w "$out"/.idx/dev.nix
+#     chmod -R u+w "$out"
+#     cp -rf ${./.idx/airules.md} "$out/.idx/airules.md"
+#     cp -rf "$out/.idx/airules.md" "$out/GEMINI.md"
+#     chmod -R u+w "$out"
+#     (cd "$out"; npm install --package-lock-only --ignore-scripts)
+#   '';
 
 }
