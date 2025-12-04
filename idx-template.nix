@@ -2,7 +2,7 @@
   channel = "stable-24.05";
   packages = [ pkgs.nodejs ];
   bootstrap = ''
-    npx nativescript create myCoolApp --vue --path "$out"
+    npx nativescript create myCoolApp --template vue --path "$out"
     mkdir "$WS_NAME"/.idx
     cp ${./dev.nix} "$WS_NAME"/.idx/dev.nix && chmod +w "$WS_NAME"/.idx/dev.nix
     mv "$WS_NAME" "$out"
