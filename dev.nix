@@ -25,6 +25,9 @@
       # Runs when a workspace is first created
       onCreate = {
         # Example: install JS dependencies from NPM
+        install = ''
+          npm ci --prefer-offline --no-audit --no-progress --timing
+          yes | npx ns preview'';
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
         default.openFiles = [ ".idx/dev.nix" "README.md" ];
