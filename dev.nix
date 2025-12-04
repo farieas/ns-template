@@ -8,7 +8,7 @@
     # pkgs.go
     # pkgs.python311
     # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
+     pkgs.nodejs
     # pkgs.nodePackages.nodemon
   ];
   # Sets environment variables in the workspace
@@ -19,22 +19,7 @@
       # "vscodevim.vim"
       "google.gemini-cli-vscode-ide-companion"
     ];
-    # Enable previews
-    previews = {
-      enable = true;
-      previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
-      };
-    };
+    
     # Workspace lifecycle hooks
     workspace = {
       # Runs when a workspace is first created
