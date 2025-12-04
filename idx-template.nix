@@ -2,7 +2,7 @@
   channel = "stable-24.05";
   packages = [ pkgs.nodejs ];
   bootstrap = ''
-    npx nativescript create .mo --template vue --path "$out"
+    npx nativescript create . --template vue --path "$out"
     mkdir "$out"/.idx
     cp ${./dev.nix} "$out"/.idx/dev.nix && chmod +w "$out"/.idx/dev.nix
     chmod -R u+w "$out"
