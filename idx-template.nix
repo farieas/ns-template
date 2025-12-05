@@ -10,14 +10,14 @@
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npx nativescript-vue create $WS_NAME --vue
+    npx nativescript-vue create $WS_NAME
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
 
     chmod -R u+w "$out"
-    cd "$out"; npm install -D nativescript
+    cd "$out"; npm install -D nativescript-vue
     cd "$out"; npm install --package-lock-only --ignore-scripts --legacy-peer-deps
   '';
 
