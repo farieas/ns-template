@@ -10,7 +10,7 @@
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npx nativescript@latest create $WS_NAME --template svelte
+    npx nativescript@latest create $WS_NAME --template nativescript-community/svelte-native@1.0.30
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
