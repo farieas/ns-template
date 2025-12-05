@@ -21,6 +21,7 @@
     cd "$out"; npm install --package-lock-only --ignore-scripts --legacy-peer-deps
   '';
 
+# working
   #     bootstrap = ''
   #   mkdir -p "$WS_NAME"
   #   npx nativescript create $WS_NAME --template @nativescript-vue/template-blank@latest
