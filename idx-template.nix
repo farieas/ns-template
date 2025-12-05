@@ -12,7 +12,7 @@
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npx nativescript@9.0.0 create $WS_NAME --svelte
+    npx nativescript@8.9.3 create $WS_NAME --svelte
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
