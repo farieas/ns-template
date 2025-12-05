@@ -12,14 +12,14 @@
    ];
     bootstrap = ''
       mkdir -p "$WS_NAME"
-    npx nativescript@latest create $WS_NAME --template @nativescript/template-blank-svelte
+    npx nativescript@8.0.0 create $WS_NAME --template @nativescript/template-blank-svelte
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
 
     chmod -R u+w "$out"
-     cd "$out"; npm install -D nativescript
+     
     cd "$out"; npm install --package-lock-only --ignore-scripts
   '';
 #   bootstrap = ''
