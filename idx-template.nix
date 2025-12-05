@@ -4,6 +4,10 @@
     pkgs.nodejs 
     pkgs.git
     pkgs.curl
+    pkgs.python313
+    pkgs.python313Packages.pip
+    pkgs.python313Packages.fastapi
+    pkgs.python313Packages.uvicorn
    ];
     bootstrap = ''
       mkdir -p "$WS_NAME"
