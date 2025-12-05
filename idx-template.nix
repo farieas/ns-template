@@ -8,6 +8,7 @@
     pkgs.python313Packages.pip
     pkgs.python313Packages.fastapi
     pkgs.python313Packages.uvicorn
+    pkgs.ruby
    ];
     bootstrap = ''
       mkdir -p "$WS_NAME"
