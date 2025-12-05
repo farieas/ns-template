@@ -2,11 +2,9 @@
   channel = "stable-25.05";
   packages = [ 
     pkgs.nodejs_24 
-    pkgs.git
-    pkgs.curl
-    pkgs.python312
-    pkgs.python312Packages.pip
-    pkgs.python312Packages.fastapi
+    pkgs.python313
+    pkgs.python313Packages.pip
+    pkgs.python313Packages.fastapi
     pkgs.python313Packages.uvicorn
     pkgs.ruby
    ];
