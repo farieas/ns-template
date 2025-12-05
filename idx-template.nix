@@ -1,6 +1,10 @@
 { pkgs, ... }: {
   channel = "stable-24.05";
-  packages = [ pkgs.nodejs ];
+  packages = [ 
+    pkgs.nodejs 
+    pkgs.git
+    pkgs.curl
+   ];
     bootstrap = ''
       mkdir -p "$WS_NAME"
     npx nativescript create "$WS_NAME" --template @nativescript/svelte-template
