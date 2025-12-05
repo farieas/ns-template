@@ -3,7 +3,7 @@
   packages = [ pkgs.nodejs ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npx nativescript create "$WS_NAME" --template vue
+    npm nativescript create "$WS_NAME" --template @nativescript/svelte-template
      mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
