@@ -11,8 +11,8 @@
     pkgs.ruby
    ];
     bootstrap = ''
-      mkdir -p "$WS_NAME"
-    npx nativescript@8.7.0 create $WS_NAME --svelte
+    mkdir -p "$WS_NAME"
+    npx nativescript@8.7.0 create $WS_NAME --svelte --legacy-peer-deps
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
