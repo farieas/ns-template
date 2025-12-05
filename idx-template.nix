@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   channel = "stable-25.05";
   packages = [ 
-    pkgs.nodejs 
+    pkgs.nodejs_24 
     pkgs.git
     pkgs.curl
     pkgs.python312
