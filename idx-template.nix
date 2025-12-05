@@ -12,7 +12,7 @@
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npx nativescript@8.8.0 create $WS_NAME --svelte --legacy-peer-deps
+    npx nativescript@8.9.0 create $WS_NAME --svelte
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
@@ -20,7 +20,7 @@
 
     chmod -R u+w "$out"
      
-    cd "$out"; npm install --package-lock-only --ignore-scripts
+    cd "$out"; npm install --package-lock-only --ignore-scripts --legacy-peer-deps
   '';
 #   bootstrap = ''
     
