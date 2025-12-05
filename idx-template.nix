@@ -20,7 +20,7 @@
 
     chmod -R u+w "$out"
      
-    cd "$out"; npm install --package-lock-only --ignore-scripts --force
+    cd "$out"; npm install --package-lock-only --ignore-scripts --legacy-peer-deps
   '';
 #   bootstrap = ''
     
