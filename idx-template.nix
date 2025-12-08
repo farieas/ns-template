@@ -10,7 +10,7 @@
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npx nativescript create $WS_NAME --template @nativescript/template-blank-svelte
+    npx nativescript create "$WS_NAME" --template @nativescript-vue/template-blank@latest --js
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
