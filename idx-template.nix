@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-  channel = "stable-25.05";
+  channel = "stable-24.05";
   packages = [ 
-    pkgs.nodejs_24 
+    pkgs.nodejs
     pkgs.python313
     pkgs.python313Packages.pip
     pkgs.python313Packages.fastapi
