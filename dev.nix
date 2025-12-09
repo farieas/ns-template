@@ -27,7 +27,7 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         install = ''
-          npm ci --prefer-offline --no-audit --no-progress --timing
+          npm ci --prefer-offline --no-audit --no-progress --timing --legacy-peer-deps true
           yes | npx ns preview'';
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
