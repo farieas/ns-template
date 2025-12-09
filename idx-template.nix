@@ -7,7 +7,7 @@
     bootstrap = ''
     mkdir -p "$WS_NAME"
     npm config set legacy-peer-deps true
-    npm nativescript create "$WS_NAME" --svelte
+    npm install nativescript create "$WS_NAME" --svelte
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
