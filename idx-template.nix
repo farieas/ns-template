@@ -11,14 +11,13 @@
     bootstrap = ''
     mkdir -p "$WS_NAME"
     npm config set --legacy-peer-deps
-    npx nativescript create "$WS_NAME" --svelte
+    npm install nativescript create "$WS_NAME" --svelte
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
 
     chmod -R u+w "$out"
-    cd "$out"; npm install -D nativescript
     cd "$out"; npm install --package-lock-only --ignore-scripts --legacy-peer-deps
   '';
 
