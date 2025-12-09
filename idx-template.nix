@@ -10,7 +10,7 @@
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
-    npm config set --legacy-peer-deps true
+    npm config set legacy-peer-deps true
     npm install nativescript create "$WS_NAME" --svelte
     mkdir -p "$WS_NAME/.idx/"
     cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
@@ -18,7 +18,7 @@
     mv "$WS_NAME" "$out"
 
     chmod -R u+w "$out"
-    cd "$out"; npm install --package-lock-only --ignore-scripts --legacy-peer-deps
+    cd "$out"; npm install --package-lock-only --ignore-scripts 
   '';
 
 # working
