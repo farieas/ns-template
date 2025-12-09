@@ -2,11 +2,7 @@
   channel = "stable-24.05";
   packages = [ 
     pkgs.nodejs
-    pkgs.python313
-    pkgs.python313Packages.pip
-    pkgs.python313Packages.fastapi
-    pkgs.python313Packages.uvicorn
-    pkgs.ruby
+    
    ];
     bootstrap = ''
     mkdir -p "$WS_NAME"
